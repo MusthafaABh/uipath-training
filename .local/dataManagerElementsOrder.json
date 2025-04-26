@@ -1,0 +1,85 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "GeneratedName&Sequence_2",
+        "LastName&Sequence_2",
+        "FirstName&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Finding Largest Number.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FinalMinValue&Sequence_2",
+        "InputArray&Sequence_2",
+        "Min&Sequence_2",
+        "FinalValue&Sequence_2",
+        "index&Sequence_7"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LargestAndSmallerNumber.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "maxValue&Sequence_2",
+        "MinValue&Sequence_2",
+        "NumArray&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LargeAndSMallNumber.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "MaxValue&Sequence_2",
+        "LowestValue&Sequence_2",
+        "NumArray&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "FirstNameAndLastname.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FullName&Sequence_2",
+        "SecondName&Sequence_2",
+        "FirstName&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "FindingPrimeNumber.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "IsPrime&Sequence_2",
+        "InputNumber&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
