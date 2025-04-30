@@ -80,6 +80,34 @@
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "ExcelTraining.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DT_TaxTable&Sequence_2",
+        "idx&Sequence_2",
+        "Tax&Sequence_2",
+        "NewColumnName&Sequence_2",
+        "DT_ExcelData&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Calculate Total Salary.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TaxAmount&Sequence_3",
+        "TotalSalary&Sequence_3",
+        "Salary&Sequence_3",
+        "TaxPercent&Sequence_3",
+        "DT_Taxtable&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }
