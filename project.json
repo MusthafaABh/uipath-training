@@ -1,9 +1,11 @@
 {
-  "name": "FirstNameLastNameGenerator",
+  "name": "uipath-training",
   "projectId": "01f4d1be-9e47-415c-be1c-094723f2913d",
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.Excel.Activities": "[3.0.1]",
+    "UiPath.Mail.Activities": "[2.0.11]",
     "UiPath.System.Activities": "[25.2.1]"
   },
   "webServices": [],
