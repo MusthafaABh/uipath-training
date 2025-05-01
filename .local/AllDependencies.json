@@ -18973,8 +18973,8 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "FirstNameLastNameGenerator",
-      "projectName": "FirstNameLastNameGenerator",
+      "projectUniqueName": "uipath-training",
+      "projectName": "uipath-training",
       "projectPath": "C:\\Users\\Nasima Banu\\Documents\\UiPath\\uipath-training\\.local",
       "packagesPath": "C:\\Users\\Nasima Banu\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Nasima Banu\\Documents\\UiPath\\uipath-training\\.local",

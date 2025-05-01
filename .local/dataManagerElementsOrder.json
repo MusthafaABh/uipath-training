@@ -82,7 +82,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "ExcelTraining.xaml",
+      "Path": "TaxCalculator/ExcelTraining.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "DT_TaxTable&Sequence_2",
@@ -96,7 +96,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Calculate Total Salary.xaml",
+      "Path": "TaxCalculator/Calculate Total Salary.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "TaxAmount&Sequence_3",
