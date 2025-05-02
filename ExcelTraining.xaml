@@ -135,6 +135,14 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:AddDataColumn>
+      <ui:AddDataColumn x:TypeArguments="x:Int32" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Total_Salary" DataTable="[DT_ExcelData]" DisplayName="Add New Column" sap:VirtualizedContainerService.HintSize="468.8,220" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_9">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:AddDataColumn>
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="468.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;New column for Tax is added&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -221,7 +229,6 @@
           </InArgument>
         </ui:ReadRange.Range>
       </ui:ReadRange>
-      <ui:AddDataColumn x:TypeArguments="x:Int32" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Total Salary" DataTable="[DT_Taxtable]" DisplayName="Add Total Salary Column" sap:VirtualizedContainerService.HintSize="468.8,220" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_8" />
       <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_Taxtable]" DisplayName="For Each Row in DT_Taxtable" sap:VirtualizedContainerService.HintSize="468.8,956.8" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
