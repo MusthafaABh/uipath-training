@@ -85,6 +85,7 @@
       "Path": "ExcelTraining.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "DT_Taxtable&Sequence_23",
         "TaxPercent&Sequence_23",
         "Salary&Sequence_23",
         "TotalSalary&Sequence_23",
@@ -94,6 +95,29 @@
         "Tax&Sequence_2",
         "NewColumnName&Sequence_2",
         "DT_ExcelData&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Email_Task.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SenderMail&Sequence_1",
+        "DT_ExcelData&Sequence_19",
+        "GetFileExtension&Sequence_14"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test Mail Routing.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Extension&Sequence_12",
+        "SenderMail&Sequence_4"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
