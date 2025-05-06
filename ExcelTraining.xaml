@@ -93,13 +93,13 @@
       <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ExcelTraining" sap:VirtualizedContainerService.HintSize="870.8000000000001,3544.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ExcelTraining" sap:VirtualizedContainerService.HintSize="870.8000000000001,3173.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="This module is created to get employee data from Excel and calculate their total salary after Tax deduction&#xA;" DisplayName="Sequence To Calculate Employees Tax " sap:VirtualizedContainerService.HintSize="502.4,3521.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="This module is created to get employee data from Excel and calculate their total salary after Tax deduction&#xA;" DisplayName="Sequence To Calculate Employees Tax " sap:VirtualizedContainerService.HintSize="537.6,3150.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="DT_ExcelData" />
         <Variable x:TypeArguments="x:String" Name="NewColumnName" />
@@ -113,7 +113,7 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Reading the excel and Extracting to DataTable" DataTable="[DT_ExcelData]" DisplayName="Read Excel Sheet" sap:VirtualizedContainerService.HintSize="468.8,151.2" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="C:\Users\Nasima Banu\Documents\Excel task.xlsx">
+      <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Reading the excel and Extracting to DataTable" DataTable="[DT_ExcelData]" DisplayName="Read Excel Sheet" sap:VirtualizedContainerService.HintSize="504,151.2" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="C:\Users\Nasima Banu\Documents\Excel task.xlsx">
         <ui:ReadRange.Range>
           <InArgument x:TypeArguments="x:String">
             <Literal x:TypeArguments="x:String" Value="" />
@@ -127,7 +127,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadRange>
-      <ui:AddDataColumn x:TypeArguments="x:Int32" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Tax" DataTable="[DT_ExcelData]" DisplayName="Add New Column" sap:VirtualizedContainerService.HintSize="468.8,220" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3">
+      <ui:AddDataColumn x:TypeArguments="x:Int32" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Tax" DataTable="[DT_ExcelData]" DisplayName="Add New Column" sap:VirtualizedContainerService.HintSize="504,220" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -135,7 +135,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:AddDataColumn>
-      <ui:AddDataColumn x:TypeArguments="x:Int32" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Total_Salary" DataTable="[DT_ExcelData]" DisplayName="Add New Column" sap:VirtualizedContainerService.HintSize="468.8,220" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_9">
+      <ui:AddDataColumn x:TypeArguments="x:Int32" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Total_Salary" DataTable="[DT_ExcelData]" DisplayName="Add New Column" sap:VirtualizedContainerService.HintSize="504,220" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_9">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -143,7 +143,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:AddDataColumn>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="468.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;New column for Tax is added&quot;]">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="504,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;New column for Tax is added&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -151,34 +151,21 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
-      <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[DT_ExcelData]" DisplayName="Write New Sheet" sap:VirtualizedContainerService.HintSize="468.8,148" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="Sheet2" WorkbookPath="C:\Users\Nasima Banu\Documents\Excel task.xlsx">
-        <ui:WriteRange.StartingCell>
-          <InArgument x:TypeArguments="x:String">
-            <Literal x:TypeArguments="x:String" Value="" />
-          </InArgument>
-        </ui:WriteRange.StartingCell>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:WriteRange>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_ExcelData]" DisplayName="For Each Row in DT-ExcelData" sap:VirtualizedContainerService.HintSize="468.8,1388" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_ExcelData]" DisplayName="For Each Row in DT-ExcelData" sap:VirtualizedContainerService.HintSize="504,1284.8" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="451.2,1206.4" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="502.4,1103.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Switch x:TypeArguments="x:String" DisplayName="Switch to Different Roles" Expression="[CurrentRow(&quot;Role in Company&quot;).ToString()]" sap:VirtualizedContainerService.HintSize="417.6,980.8" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+              <Switch x:TypeArguments="x:String" DisplayName="Switch to Different Roles" Expression="[CurrentRow(&quot;Role in Company&quot;).ToString()]" sap:VirtualizedContainerService.HintSize="468.8,877.6" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                 <Switch.Default>
-                  <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="467.2,89.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -186,32 +173,53 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </Sequence>
                 </Switch.Default>
-                <Sequence x:Key="Analyst" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,199.2" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                <Sequence x:Key="Analyst" DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[&quot;I&quot; + (DT_ExcelData.Rows.IndexOf(CurrentRow) + 2).ToString()]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="382.4,139.2" sap2010:WorkflowViewState.IdRef="WriteCell_5" SheetName="Sheet2" Text="10" WorkbookPath="C:\Users\Nasima Banu\Documents\Excel task.xlsx" />
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Object">[CurrentRow("Tax")]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Object">[10]</InArgument>
+                    </Assign.Value>
+                  </Assign>
                 </Sequence>
-                <Sequence x:Key="Medical Engineer" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,199.2" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                <Sequence x:Key="Medical Engineer" DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[&quot;I&quot; + (DT_ExcelData.Rows.IndexOf(CurrentRow) + 2).ToString()]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="382.4,139.2" sap2010:WorkflowViewState.IdRef="WriteCell_6" SheetName="Sheet2" Text="15" WorkbookPath="C:\Users\Nasima Banu\Documents\Excel task.xlsx" />
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Object">[CurrentRow("Tax")]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Object">[15]</InArgument>
+                    </Assign.Value>
+                  </Assign>
                 </Sequence>
-                <Sequence x:Key="Accountant" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,199.2" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                <Sequence x:Key="Accountant" DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:WriteCell WorkbookPathResource="{x:Null}" Cell="[&quot;I&quot; + (DT_ExcelData.Rows.IndexOf(CurrentRow) + 2).ToString()]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="382.4,139.2" sap2010:WorkflowViewState.IdRef="WriteCell_7" SheetName="Sheet2" Text="12" WorkbookPath="C:\Users\Nasima Banu\Documents\Excel task.xlsx" />
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_5">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Object">[CurrentRow("Tax")]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Object">[12]</InArgument>
+                    </Assign.Value>
+                  </Assign>
                 </Sequence>
               </Switch>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="417.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Updated the sheet with Tax values&quot;]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="468.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Updated the sheet with Tax values&quot;]" />
             </Sequence>
           </ActivityAction>
         </ui:ForEachRow.Body>
@@ -222,14 +230,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
-      <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[DT_Taxtable]" DisplayName="Read Sheet2" sap:VirtualizedContainerService.HintSize="468.8,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Sheet2" WorkbookPath="C:\Users\Nasima Banu\Documents\Excel task.xlsx">
-        <ui:ReadRange.Range>
-          <InArgument x:TypeArguments="x:String">
-            <Literal x:TypeArguments="x:String" Value="" />
-          </InArgument>
-        </ui:ReadRange.Range>
-      </ui:ReadRange>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_Taxtable]" DisplayName="For Each Row in DT_Taxtable" sap:VirtualizedContainerService.HintSize="468.8,956.8" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_ExcelData]" DisplayName="For Each Row in DT_Taxtable" sap:VirtualizedContainerService.HintSize="504,956.8" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -241,18 +242,19 @@
                 <Variable x:TypeArguments="ui:GenericValue" Name="Salary" />
                 <Variable x:TypeArguments="x:Int32" Name="TotalSalary" />
                 <Variable x:TypeArguments="ui:GenericValue" Name="TaxAmount" />
+                <Variable x:TypeArguments="sd:DataTable" Name="DT_Taxtable" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ReadCell WorkbookPathResource="{x:Null}" Cell="[&quot;H&quot; + (DT_TaxTable.Rows.IndexOf(CurrentRow) + 2).ToString()]" DisplayName="Read Salary Cell Value" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ReadCell_1" SheetName="Sheet2" WorkbookPath="C:\Users\Nasima Banu\Documents\Excel task.xlsx">
+              <ui:ReadCell WorkbookPathResource="{x:Null}" Cell="[&quot;H&quot; + (DT_TaxTable.Rows.IndexOf(CurrentRow) + 2).ToString()]" DisplayName="Read Salary Cell Value" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ReadCell_1" SheetName="Sheet1" WorkbookPath="C:\Users\Nasima Banu\Documents\Excel task.xlsx">
                 <ui:ReadCell.Result>
                   <OutArgument x:TypeArguments="ui:GenericValue">[Salary]</OutArgument>
                 </ui:ReadCell.Result>
               </ui:ReadCell>
-              <ui:ReadCell WorkbookPathResource="{x:Null}" Cell="[&quot;I&quot; + (DT_TaxTable.Rows.IndexOf(CurrentRow) + 2).ToString()]" DisplayName="Read Tax Cell Value" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ReadCell_2" SheetName="Sheet2" WorkbookPath="C:\Users\Nasima Banu\Documents\Excel task.xlsx">
+              <ui:ReadCell WorkbookPathResource="{x:Null}" Cell="[&quot;I&quot; + (DT_TaxTable.Rows.IndexOf(CurrentRow) + 2).ToString()]" DisplayName="Read Tax Cell Value" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="ReadCell_2" SheetName="Sheet1" WorkbookPath="C:\Users\Nasima Banu\Documents\Excel task.xlsx">
                 <ui:ReadCell.Result>
                   <OutArgument x:TypeArguments="ui:GenericValue">[TaxPercent]</OutArgument>
                 </ui:ReadCell.Result>
