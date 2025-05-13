@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="T8sNbGz0BE-h6hdr1CfZFg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-9, -9, 1938, 1038" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABESURBVDhPY0i32n4g3Wr7fzLxfgYsgiThQWYADCCzsQHaGUAOpq4LkBXgAzgNIAdT1wXICvABnAaQgweHAfvRBUnAuwEl0a7q96YPWgAAAABJRU5ErkJggg==" Selector="&lt;html app='msedge.exe' title='Contact Information - Google Forms' /&gt;" Title="Contact Information - Google Forms" Url="https://docs.google.com/forms/d/1YtS5fLL2bxV87osTx8VI669gdTZ25Ond_LO-7rCs-4w/edit" Version="V1">
+      <imageRef attrName="InformativeScreenshot" originalValue="272d67fce48be39f11dd85fbccd5dd66.jpg" xmlns="">0OtwnznfyHUCjWDLsxiKjbg</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>
