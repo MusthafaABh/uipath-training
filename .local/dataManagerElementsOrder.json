@@ -105,8 +105,10 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "SenderMail&Sequence_1",
+        "GetFileExtension&Sequence_14",
         "DT_ExcelData&Sequence_19",
-        "GetFileExtension&Sequence_14"
+        "GetFileExtension&Sequence_21",
+        "DT_ExcelData&Sequence_22"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
@@ -118,6 +120,18 @@
       "VariablesSectionElementsOrder": [
         "Extension&Sequence_12",
         "SenderMail&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "UiAutomation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExcelData&Sequence_3",
+        "FileName&Sequence_3",
+        "FilePath&Sequence_3"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
