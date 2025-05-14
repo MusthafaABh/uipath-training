@@ -12,6 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "emailList&Sequence_2",
         "GeneratedName&Sequence_2",
         "LastName&Sequence_2",
         "FirstName&Sequence_2"
@@ -129,9 +130,25 @@
       "Path": "UiAutomation.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "SelectorTable&Sequence_3",
         "ExcelData&Sequence_3",
         "FileName&Sequence_3",
         "FilePath&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "UiAutomationTestWithSingleTypeInto.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "index&Sequence_1",
+        "CurrentSelector&Sequence_7",
+        "CurrentValue&Sequence_2",
+        "CurrentColumn&Sequence_2",
+        "SelectorTable&Sequence_4",
+        "Dt_ExcelData&Sequence_4"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],

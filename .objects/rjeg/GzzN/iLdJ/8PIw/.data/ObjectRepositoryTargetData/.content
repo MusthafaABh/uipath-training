@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="rGvcVvg1XUOB63yd8Xx5FA" Reference="bfWZDUp7eE2cY22B6RXyVg/8PIw3Z02lk6G5kM69u9QUQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="YfowAYp8sk2mXUry4ZBOLg" Reference="bfWZDUp7eE2cY22B6RXyVg/8PIw3Z02lk6G5kM69u9QUQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rpachallenge.com" CVScreenId="f10648f4-3889-4dbf-a342-ecc8468cb814" CvElementArea="1025, 576, 385, 55" CvType="InputBox" DesignTimeRectangle="1029, 572, 378, 57" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl innertext='Company Name' /&gt;&lt;webctrl tag='INPUT' /&gt;" Guid="9a9b4d43-20f2-4485-937d-13466b427709" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rpachallenge.com" CVScreenId="f10648f4-3889-4dbf-a342-ecc8468cb814" CvElementArea="1025, 576, 385, 55" CvType="InputBox" DesignTimeRectangle="1029, 572, 378, 57" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" Guid="9a9b4d43-20f2-4485-937d-13466b427709" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
       <TargetAnchorable.Anchors>
-        <scg:List x:TypeArguments="ITarget" Capacity="4">
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
           <Target CVScreenId="f10648f4-3889-4dbf-a342-ecc8468cb814" CvTextArea="1026, 551, 127, 18" CvTextArgument="Company Name" CvType="Text" DesignTimeRectangle="1029, 548, 124, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Company Name' tag='LABEL' type='' class='' check:innerText='Company Name' /&gt;" Guid="e5c28795-38b4-4fee-9cf8-d81b786afa7a" SearchSteps="FuzzySelector, CV" />
         </scg:List>
       </TargetAnchorable.Anchors>
-      <imageRef attrName="InformativeScreenshot" originalValue="6b8168a46233592f1e8bb6778662a691.png" xmlns="">0vNet9wu8dUuTM29yyMH6xQ</imageRef>
+      <imageRef attrName="InformativeScreenshot" originalValue="6b8168a46233592f1e8bb6778662a691.png" xmlns="">0J3KXo8Q7XE2PzANn-0ju7A</imageRef>
     </TargetAnchorable>
-    <x:String x:Key="ActivityType">None</x:String>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
   </ObjectRepositoryTargetData.Data>
 </ObjectRepositoryTargetData>

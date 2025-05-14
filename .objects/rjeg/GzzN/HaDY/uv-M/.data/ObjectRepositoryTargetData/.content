@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="05cIh-3C6kqPNw6vXbinkA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rpachallenge.com/movieSearch" CVScreenId="bd80443b-b266-4c3c-b21f-1880062d31cd" CvTextArea="689, 861, 167, 27" CvTextArgument="Exterritorial" CvType="Text" DesignTimeRectangle="690, 856, 299, 40" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Exterritorial ' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Exterritorial ' tag='SPAN' type='' class='card-title activator' check:innerText='Exterritorial' /&gt;" Guid="e1c2720f-d89a-45ee-8f00-45a9b03184be" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="bd80443b-b266-4c3c-b21f-1880062d31cd" DesignTimeRectangle="660, 288, 359, 538" ElementType="Icon" FullSelectorArgument="&lt;webctrl tag='IMG' /&gt;" Guid="50f9e38d-c891-4a52-a826-c669463d0c17" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="97ea285e45a3e78e3939e0ff1bebf7a0.png" xmlns="">0TmdaxknT4U2IYALgETJjyg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
