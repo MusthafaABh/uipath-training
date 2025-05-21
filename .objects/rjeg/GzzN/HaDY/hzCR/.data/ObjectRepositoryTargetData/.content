@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="yBnTXxlpHUO6M-0qlO8NvA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rpachallenge.com/assets/shortestPath/public/shortestpath.html" CVScreenId="60b2cb1c-bd93-4c28-846a-c7f57b4de33a" CvElementArea="818, 902, 144, 40" CvType="InputBox" DesignTimeRectangle="821, 903, 139, 37" DesignTimeScaleFactor="1.25" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='ERZMO' tag='SELECT' type='' class='form-control input-sm ' aaname='' /&gt;" Guid="024725af-5ea3-4603-acd7-3eb96018dafd" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Automation Challenge' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="60b2cb1c-bd93-4c28-846a-c7f57b4de33a" CvElementArea="818, 902, 144, 40" CvTextArea="839, 877, 50, 17" CvTextArgument="State" CvType="InputBox" DesignTimeRectangle="818, 877, 144, 64" FuzzySelectorArgument="&lt;webctrl class='panel-body' type='' aaname='                                                                                                            ' parentid='gamecontainer' tag='DIV' check:innerText='State&amp;#xA;AL&amp;#xA;AK&amp;#xA;AZ&amp;#xA;AR&amp;#xA;CA&amp;#xA;CO&amp;#xA;CT&amp;#xA;DE&amp;#xA;DC&amp;#xA;FL&amp;#xA;GA&amp;#xA;HI&amp;#xA;ID&amp;#xA;IL&amp;#xA;IN&amp;#xA;IA&amp;#xA;KS&amp;#xA;KY&amp;#xA;LA&amp;#xA;ME&amp;#xA;MD&amp;#xA;MA&amp;#xA;MI&amp;#xA;MN&amp;#xA;MS&amp;#xA;MO&amp;#xA;MT&amp;#xA;NE&amp;#xA;NH&amp;#xA;NV&amp;#xA;NJ' /&gt;" Guid="e624d985-bb84-4a2e-bb37-daf88116cddc" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="a5cdd32b2120afad7b6860b1158eb60d.png" xmlns="">0aR5jo0aFGUyVJ1_Bxo8jew</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

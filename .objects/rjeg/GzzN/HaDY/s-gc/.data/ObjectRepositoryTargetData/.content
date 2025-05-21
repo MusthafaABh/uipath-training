@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="V8JEiyQyD0mgOigc2JCyNw" Reference="bfWZDUp7eE2cY22B6RXyVg/s-gcr3Ww1EiPXtFu4HsbMA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rpachallenge.com" CVScreenId="ed19c94b-37cd-4bd6-ab4f-491d71d72d4b" CvTextArea="372, 475, 35, 18" CvTextArgument="the" CvType="Text" DesignTimeRectangle="369, 441, 125, 63" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='JA' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='JA' tag='SPAN' type='' class='' check:innerText='JA' /&gt;" Guid="aee1a914-d03d-46d1-a19b-f67c501e60aa" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="ed19c94b-37cd-4bd6-ab4f-491d71d72d4b" CvElementArea="366, 312, 104, 51" CvTextArea="405, 329, 25, 17" CvTextArgument="EN" CvType="Button" DesignTimeRectangle="369, 316, 125, 63" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='' aaname='EN' check:innerText='EN' /&gt;" Guid="fab62778-3571-417b-9a89-003f3b14e4d6" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="fb3ff059584bdfe6ea1d8ad2b3a607b5.png" xmlns="">08YROu1-eck2nPYXuHuLBQQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

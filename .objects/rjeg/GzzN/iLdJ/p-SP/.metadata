@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Rust close",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "p-SPqBkOX0--rvjVf3HmPg",
+  "Reference": "bfWZDUp7eE2cY22B6RXyVg/p-SPqBkOX0--rvjVf3HmPg",
+  "ParentRef": "bfWZDUp7eE2cY22B6RXyVg/iLdJU94p3U6yXyMmQmopbQ",
+  "Created": "2025-05-14T18:27:14.5848761Z",
+  "Updated": "2025-05-14T18:27:14.5848761Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.12.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

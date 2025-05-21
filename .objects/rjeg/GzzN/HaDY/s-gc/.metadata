@@ -1,0 +1,14 @@
+﻿{
+  "Name": "JA",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "s-gcr3Ww1EiPXtFu4HsbMA",
+  "Reference": "bfWZDUp7eE2cY22B6RXyVg/s-gcr3Ww1EiPXtFu4HsbMA",
+  "ParentRef": "bfWZDUp7eE2cY22B6RXyVg/HaDYxBgx60KWcfgzmL8pDw",
+  "Created": "2025-05-18T15:46:22.2329693Z",
+  "Updated": "2025-05-18T15:46:22.2329693Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.12.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

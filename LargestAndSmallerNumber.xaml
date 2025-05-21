@@ -73,15 +73,18 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LargestAndSmallerNumber" sap:VirtualizedContainerService.HintSize="850.4000000000001,1246.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="LargestAndSmallerNumber" sap:VirtualizedContainerService.HintSize="925.2,1960" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="537.6,1223.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Finding Largest &amp; Smallest Number From An Array" sap:VirtualizedContainerService.HintSize="537.6,1936.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="s:Int32[]" Name="NumArray" />
         <Variable x:TypeArguments="x:Int32" Name="MinValue" />
@@ -92,6 +95,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="504,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;The Process Has Started&quot;]" />
       <Assign sap:VirtualizedContainerService.HintSize="504,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="s:Int32[]">[NumArray]</OutArgument>
@@ -116,22 +120,22 @@
           <InArgument x:TypeArguments="x:Int32">[NumArray(0)]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For Each currentNumber" sap:VirtualizedContainerService.HintSize="504,690.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[NumArray]">
+      <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For Each currentNumber" sap:VirtualizedContainerService.HintSize="504,998.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[NumArray]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="currentNumber" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="502.4,560" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="502.4,868" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[currentNumber &lt; MinValue]" sap:VirtualizedContainerService.HintSize="468.8,84.8" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[currentNumber &lt; MinValue]" sap:VirtualizedContainerService.HintSize="468.8,392.8" sap2010:WorkflowViewState.IdRef="If_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -195,7 +199,8 @@
           </ActivityAction>
         </ui:ForEach.Body>
       </ui:ForEach>
-      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="504,108.8" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[MinValue.ToString + &quot;Seperator&quot; +maxValue.ToString]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="504,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[MinValue.ToString + &quot;Seperator&quot; +maxValue.ToString]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="504,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;The execution has been completed successfully!&quot;]" />
     </Sequence>
   </Sequence>
 </Activity>

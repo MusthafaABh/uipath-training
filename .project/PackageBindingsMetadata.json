@@ -19,16 +19,40 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
+          "BindingsVersion": {
+            "Value": "2.1",
+            "ValueSource": "Constant"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.Activities.System.Jobs.RunJob": [
+      {
+        "Type": "process",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "folderPath": {
+            "Value": "FolderPath",
             "ValueSource": "Property"
           },
+          "name": {
+            "Value": "ProcessName",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
           "BindingsVersion": {
             "Value": "2.1",
             "ValueSource": "Constant"
           },
-          "DisplayLabel": {
-            "Value": "FullName",
+          "SolutionsSupport": {
+            "Value": "true",
             "ValueSource": "Constant"
           }
         },
@@ -71,16 +95,8 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "DisplayLabel": {
-            "Value": "FullName",
             "ValueSource": "Constant"
           },
           "SolutionsSupport": {
@@ -111,16 +127,8 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "DisplayLabel": {
-            "Value": "FullName",
             "ValueSource": "Constant"
           },
           "SolutionsSupport": {
@@ -167,16 +175,8 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "DisplayLabel": {
-            "Value": "FullName",
             "ValueSource": "Constant"
           },
           "SolutionsSupport": {
@@ -219,16 +219,12 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
             "ValueSource": "Constant"
           },
-          "DisplayLabel": {
-            "Value": "FullName",
+          "SolutionsSupport": {
+            "Value": "true",
             "ValueSource": "Constant"
           }
         },
@@ -267,16 +263,8 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "DisplayLabel": {
-            "Value": "FullName",
             "ValueSource": "Constant"
           },
           "SolutionsSupport": {
@@ -307,16 +295,8 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "DisplayLabel": {
-            "Value": "FullName",
             "ValueSource": "Constant"
           },
           "SolutionsSupport": {
@@ -347,16 +327,12 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
             "ValueSource": "Constant"
           },
-          "DisplayLabel": {
-            "Value": "FullName",
+          "SolutionsSupport": {
+            "Value": "true",
             "ValueSource": "Constant"
           }
         },
@@ -383,16 +359,12 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
             "ValueSource": "Constant"
           },
-          "DisplayLabel": {
-            "Value": "FullName",
+          "SolutionsSupport": {
+            "Value": "true",
             "ValueSource": "Constant"
           }
         },
@@ -435,16 +407,8 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "DisplayLabel": {
-            "Value": "FullName",
             "ValueSource": "Constant"
           },
           "SolutionsSupport": {
@@ -499,20 +463,8 @@
             "Value": "MaxJobsForActivation",
             "ValueSource": "Property"
           },
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "DisplayLabel": {
-            "Value": "FullName",
-            "ValueSource": "Constant"
-          },
-          "SolutionsSupport": {
-            "Value": "true",
             "ValueSource": "Constant"
           }
         },
@@ -539,16 +491,12 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
             "ValueSource": "Constant"
           },
-          "DisplayLabel": {
-            "Value": "FullName",
+          "SolutionsSupport": {
+            "Value": "true",
             "ValueSource": "Constant"
           }
         },
@@ -575,16 +523,12 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
             "ValueSource": "Constant"
           },
-          "DisplayLabel": {
-            "Value": "FullName",
+          "SolutionsSupport": {
+            "Value": "true",
             "ValueSource": "Constant"
           }
         },
@@ -635,16 +579,8 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "DisplayLabel": {
-            "Value": "FullName",
             "ValueSource": "Constant"
           },
           "SolutionsSupport": {
@@ -687,16 +623,8 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "DisplayLabel": {
-            "Value": "FullName",
             "ValueSource": "Constant"
           },
           "SolutionsSupport": {
@@ -727,16 +655,8 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "DisplayLabel": {
-            "Value": "FullName",
             "ValueSource": "Constant"
           },
           "SolutionsSupport": {
@@ -767,16 +687,8 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "DisplayLabel": {
-            "Value": "FullName",
             "ValueSource": "Constant"
           },
           "SolutionsSupport": {
@@ -807,16 +719,8 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "DisplayLabel": {
-            "Value": "FullName",
             "ValueSource": "Constant"
           },
           "SolutionsSupport": {
@@ -847,16 +751,8 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "DisplayLabel": {
-            "Value": "FullName",
             "ValueSource": "Constant"
           },
           "SolutionsSupport": {
@@ -887,16 +783,8 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "DisplayLabel": {
-            "Value": "FullName",
             "ValueSource": "Constant"
           },
           "SolutionsSupport": {
@@ -926,16 +814,8 @@
             "Value": "CronExpression",
             "ValueSource": "Property"
           },
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "DisplayLabel": {
-            "Value": "FullName",
             "ValueSource": "Constant"
           }
         },
@@ -962,16 +842,8 @@
           }
         },
         "Arguments": {
-          "ActivityName": {
-            "Value": "DisplayName",
-            "ValueSource": "Property"
-          },
           "BindingsVersion": {
             "Value": "2.1",
-            "ValueSource": "Constant"
-          },
-          "DisplayLabel": {
-            "Value": "FullName",
             "ValueSource": "Constant"
           },
           "SolutionsSupport": {

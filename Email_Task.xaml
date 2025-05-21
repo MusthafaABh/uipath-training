@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Email_Task" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Email_Task_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabf="clr-namespace:UiPath.Mail.Activities.Business.ForEachMail;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Email_Task" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Email_Task_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabf="clr-namespace:UiPath.Mail.Activities.Business.ForEachMail;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -50,6 +50,7 @@
       <x:String>UiPath.Excel</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -124,7 +125,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Email_Task" sap:VirtualizedContainerService.HintSize="870.8000000000001,5553.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Email_Task" sap:VirtualizedContainerService.HintSize="925.2,11284.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="isfumtech@gmail.com" Name="SenderMail" />
     </Sequence.Variables>
@@ -133,301 +134,331 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="806.4,5530.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Email Automation Process" sap:VirtualizedContainerService.HintSize="841.6,11261.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="772.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Email Extraction Has Started&quot;]" />
-      <umab:GmailApplicationCard Account="{x:Null}" ClientId="{x:Null}" ClientSecret="{x:Null}" EmailAddress="{x:Null}" ConnectionAccountName="isfumtech@gmail.com #2" ConnectionId="8afc129f-4fbe-4496-a9b9-83f144abb3f4" DisplayName="Use Gmail" sap:VirtualizedContainerService.HintSize="772.8,4967.2" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="True">
-        <umab:GmailApplicationCard.Body>
-          <ActivityAction x:TypeArguments="um:IMailQuickHandle">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="739.2,4753.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <umab:ForEachEmailX DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="705.6,4693.6" sap2010:WorkflowViewState.IdRef="ForEachEmailX_1" IncludeSubfolders="False" Mails="[Gmail.Folder(&quot;Inbox&quot;)]" NumberOfEmailsLimit="15" UnreadOnly="True" WithAttachmentsOnly="False">
-                <umab:ForEachEmailX.Body>
-                  <ActivityAction x:TypeArguments="snm:MailMessage, x:Int32">
-                    <ActivityAction.Argument1>
-                      <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="CurrenMail" />
-                    </ActivityAction.Argument1>
-                    <ActivityAction.Argument2>
-                      <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
-                    </ActivityAction.Argument2>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="672,4406.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <If Condition="[IsNothing(CurrenMail.Attachments)]" sap:VirtualizedContainerService.HintSize="638.4,4346.4" sap2010:WorkflowViewState.IdRef="If_2">
-                        <If.Then>
-                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="636.8,632" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="603.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;This mail has no attachment&quot;]" />
-                            <umab:ForwardMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" Body="Hi There, Please attach the files to process" BodyType="Text" DisplayName="Forward Email" sap:VirtualizedContainerService.HintSize="603.2,397.6" sap2010:WorkflowViewState.IdRef="ForwardMailX_1" MailMessage="[CurrenMail]" MaxBodyDocumentSizeMB="2" NewSubject="This Mail has No Attachments" To="[CurrenMail.Sender.Address]" UseDocumentAsBody="False">
-                              <umab:ForwardMailX.Files>
-                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                              </umab:ForwardMailX.Files>
-                              <umab:ForwardMailX.HtmlBodyFromFile>
-                                <umabh:HtmlContentArgument FilePath="{x:Null}" HtmlBody="{x:Null}">
-                                  <umabh:HtmlContentArgument.RuntimeImages>
-                                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                                  </umabh:HtmlContentArgument.RuntimeImages>
-                                  <umabh:HtmlContentArgument.ValueMappings>
-                                    <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
-                                  </umabh:HtmlContentArgument.ValueMappings>
-                                </umabh:HtmlContentArgument>
-                              </umab:ForwardMailX.HtmlBodyFromFile>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </umab:ForwardMailX>
-                          </Sequence>
-                        </If.Then>
-                        <If.Else>
-                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="636.8,3584.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="603.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;This email has an attachment&quot;]" />
-                            <umab:SaveMailAttachmentsX Attachments="{x:Null}" DisplayName="Save Email Attachments" ExcludeInlineAttachments="True" FolderPath="[String.Concat(&quot;C:\Users\Nasima Banu\Documents\Email Attachhments&quot;)]" sap:VirtualizedContainerService.HintSize="603.2,261.6" sap2010:WorkflowViewState.IdRef="SaveMailAttachmentsX_1" Message="[CurrenMail]" OverwriteExisting="True" />
-                            <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="C:\Users\Nasima Banu\Documents\Email Attachhments" sap:VirtualizedContainerService.HintSize="603.2,3088.8" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="True">
-                              <ui:ForEachFileX.Body>
-                                <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
-                                  <ActivityAction.Argument1>
-                                    <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
-                                  </ActivityAction.Argument1>
-                                  <ActivityAction.Argument2>
-                                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
-                                  </ActivityAction.Argument2>
-                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="569.6,2800.8" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                                    <Sequence.Variables>
-                                      <Variable x:TypeArguments="x:String" Name="GetFileExtension" />
-                                    </Sequence.Variables>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <Assign sap:VirtualizedContainerService.HintSize="536,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
-                                      <Assign.To>
-                                        <OutArgument x:TypeArguments="x:String">[GetFileExtension]</OutArgument>
-                                      </Assign.To>
-                                      <Assign.Value>
-                                        <InArgument x:TypeArguments="x:String">[CurrentFile.Extension.ToLower()]</InArgument>
-                                      </Assign.Value>
-                                    </Assign>
-                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="536,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[GetFileExtension]" />
-                                    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[CurrentFile.Extension.ToLower()]" sap:VirtualizedContainerService.HintSize="536,2509.6" sap2010:WorkflowViewState.IdRef="Switch`1_1">
-                                      <Switch.Default>
-                                        <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="534.4,225.6" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;This file is not in scope&quot;]" />
-                                        </Sequence>
-                                      </Switch.Default>
-                                      <Sequence x:Key=".pdf" DisplayName="Body" sap:VirtualizedContainerService.HintSize="534.4,893.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;This mail has PDF attachment&quot;]" />
-                                        <umab:GmailApplicationCard Account="{x:Null}" ClientId="{x:Null}" ClientSecret="{x:Null}" EmailAddress="{x:Null}" ConnectionAccountName="isfumtech@gmail.com #2" ConnectionId="8afc129f-4fbe-4496-a9b9-83f144abb3f4" DisplayName="Use Gmail" sap:VirtualizedContainerService.HintSize="500.8,659.2" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_2" Timeout="90" UseConnectionService="True">
-                                          <umab:GmailApplicationCard.Body>
-                                            <ActivityAction x:TypeArguments="um:IMailQuickHandle">
-                                              <ActivityAction.Argument>
-                                                <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
-                                              </ActivityAction.Argument>
-                                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,452.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                                <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[&quot;Hi Team,  &#xA;&#xA;We are unable to process this file format. Please attach a proper Excel Format files to process. File Name is: &quot; + CurrentFile.Name]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,392.8" sap2010:WorkflowViewState.IdRef="SendMailX_3" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Unable to Process the File Format" To="[SenderMail]" UseDocumentAsBody="False">
-                                                  <umab:SendMailX.Files>
-                                                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                                                  </umab:SendMailX.Files>
-                                                  <umab:SendMailX.HtmlBodyFromFile>
-                                                    <umabh:HtmlContentArgument FilePath="{x:Null}" HtmlBody="{x:Null}">
-                                                      <umabh:HtmlContentArgument.RuntimeImages>
-                                                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                                                      </umabh:HtmlContentArgument.RuntimeImages>
-                                                      <umabh:HtmlContentArgument.ValueMappings>
-                                                        <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
-                                                      </umabh:HtmlContentArgument.ValueMappings>
-                                                    </umabh:HtmlContentArgument>
-                                                  </umab:SendMailX.HtmlBodyFromFile>
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                </umab:SendMailX>
-                                              </Sequence>
-                                            </ActivityAction>
-                                          </umab:GmailApplicationCard.Body>
-                                        </umab:GmailApplicationCard>
-                                      </Sequence>
-                                      <Sequence x:Key=".xlsx" DisplayName="Body" sap:VirtualizedContainerService.HintSize="534.4,1144" sap2010:WorkflowViewState.IdRef="Sequence_19">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="808,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Email Extraction Has Started&quot;]" />
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="808,5535.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+        <TryCatch.Try>
+          <umab:GmailApplicationCard Account="{x:Null}" ClientId="{x:Null}" ClientSecret="{x:Null}" EmailAddress="{x:Null}" ConnectionAccountName="isfumtech@gmail.com #2" ConnectionId="8afc129f-4fbe-4496-a9b9-83f144abb3f4" DisplayName="Read Mail from Gmail" sap:VirtualizedContainerService.HintSize="772.8,4940" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="True">
+            <umab:GmailApplicationCard.Body>
+              <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="739.2,4756.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <umab:ForEachEmailX DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="705.6,4696.8" sap2010:WorkflowViewState.IdRef="ForEachEmailX_1" IncludeSubfolders="False" Mails="[Gmail.Folder(&quot;Inbox&quot;)]" NumberOfEmailsLimit="15" UnreadOnly="True" WithAttachmentsOnly="False">
+                    <umab:ForEachEmailX.Body>
+                      <ActivityAction x:TypeArguments="snm:MailMessage, x:Int32">
+                        <ActivityAction.Argument1>
+                          <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="CurrenMail" />
+                        </ActivityAction.Argument1>
+                        <ActivityAction.Argument2>
+                          <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                        </ActivityAction.Argument2>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="672,4406.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If Condition="[IsNothing(CurrenMail.Attachments)]" DisplayName="Check If there is an Attachment" sap:VirtualizedContainerService.HintSize="638.4,4346.4" sap2010:WorkflowViewState.IdRef="If_2">
+                            <If.Then>
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="636.8,632" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="603.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;This mail has no attachment&quot;]" />
+                                <umab:ForwardMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" Body="Hi There, Please attach the files to process" BodyType="Text" DisplayName="Forward Email Which has No attachments" sap:VirtualizedContainerService.HintSize="603.2,397.6" sap2010:WorkflowViewState.IdRef="ForwardMailX_1" MailMessage="[CurrenMail]" MaxBodyDocumentSizeMB="2" NewSubject="This Mail has No Attachments" To="[CurrenMail.Sender.Address]" UseDocumentAsBody="False">
+                                  <umab:ForwardMailX.Files>
+                                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                  </umab:ForwardMailX.Files>
+                                  <umab:ForwardMailX.HtmlBodyFromFile>
+                                    <umabh:HtmlContentArgument FilePath="{x:Null}" HtmlBody="{x:Null}">
+                                      <umabh:HtmlContentArgument.RuntimeImages>
+                                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                      </umabh:HtmlContentArgument.RuntimeImages>
+                                      <umabh:HtmlContentArgument.ValueMappings>
+                                        <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                      </umabh:HtmlContentArgument.ValueMappings>
+                                    </umabh:HtmlContentArgument>
+                                  </umab:ForwardMailX.HtmlBodyFromFile>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </umab:ForwardMailX>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="636.8,3584.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="603.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;This email has an attachment&quot;]" />
+                                <umab:SaveMailAttachmentsX Attachments="{x:Null}" DisplayName="Save Email Attachments" ExcludeInlineAttachments="True" FolderPath="[String.Concat(&quot;C:\Users\Nasima Banu\Documents\Email Attachhments&quot;)]" sap:VirtualizedContainerService.HintSize="603.2,261.6" sap2010:WorkflowViewState.IdRef="SaveMailAttachmentsX_1" Message="[CurrenMail]" OverwriteExisting="True" />
+                                <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="C:\Users\Nasima Banu\Documents\Email Attachhments" sap:VirtualizedContainerService.HintSize="603.2,3088.8" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="True">
+                                  <ui:ForEachFileX.Body>
+                                    <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+                                      <ActivityAction.Argument1>
+                                        <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+                                      </ActivityAction.Argument1>
+                                      <ActivityAction.Argument2>
+                                        <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                      </ActivityAction.Argument2>
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="569.6,2800.8" sap2010:WorkflowViewState.IdRef="Sequence_14">
                                         <Sequence.Variables>
-                                          <Variable x:TypeArguments="sd:DataTable" Name="DT_ExcelData" />
+                                          <Variable x:TypeArguments="x:String" Name="GetFileExtension" />
                                         </Sequence.Variables>
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Reading an email that has Excel attachment&quot;]" />
-                                        <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[DT_ExcelData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="500.8,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Employee Details" WorkbookPath="[CurrentFile.FullName]">
-                                          <ui:ReadRange.Range>
-                                            <InArgument x:TypeArguments="x:String">
-                                              <Literal x:TypeArguments="x:String" Value="" />
-                                            </InArgument>
-                                          </ui:ReadRange.Range>
-                                        </ui:ReadRange>
-                                        <ui:FilterDataTable DataTable="[DT_ExcelData]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="500.8,194.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[DT_ExcelData]" SelectColumnsMode="Remove">
-                                          <ui:FilterDataTable.Filters>
-                                            <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                                              <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
-                                                <ui:FilterOperationArgument.Column>
-                                                  <InArgument x:TypeArguments="x:String">["Role in Company"]</InArgument>
-                                                </ui:FilterOperationArgument.Column>
-                                                <ui:FilterOperationArgument.Operand>
-                                                  <InArgument x:TypeArguments="x:String">["Analyst"]</InArgument>
-                                                </ui:FilterOperationArgument.Operand>
-                                              </ui:FilterOperationArgument>
-                                              <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
-                                                <ui:FilterOperationArgument.Column>
-                                                  <InArgument x:TypeArguments="x:String">["Role in Company"]</InArgument>
-                                                </ui:FilterOperationArgument.Column>
-                                                <ui:FilterOperationArgument.Operand>
-                                                  <InArgument x:TypeArguments="x:String">["IT Specialist"]</InArgument>
-                                                </ui:FilterOperationArgument.Operand>
-                                              </ui:FilterOperationArgument>
-                                              <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
-                                                <ui:FilterOperationArgument.Column>
-                                                  <InArgument x:TypeArguments="x:String">["Role in Company"]</InArgument>
-                                                </ui:FilterOperationArgument.Column>
-                                                <ui:FilterOperationArgument.Operand>
-                                                  <InArgument x:TypeArguments="x:String">["Scientist"]</InArgument>
-                                                </ui:FilterOperationArgument.Operand>
-                                              </ui:FilterOperationArgument>
-                                            </scg:List>
-                                          </ui:FilterDataTable.Filters>
-                                          <ui:FilterDataTable.SelectColumns>
-                                            <scg:List x:TypeArguments="InArgument" Capacity="4">
-                                              <x:Null />
-                                            </scg:List>
-                                          </ui:FilterDataTable.SelectColumns>
-                                        </ui:FilterDataTable>
-                                        <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[&quot;Hi Team, &quot; + Environment.NewLine + &quot;We have successfully processed your file: &quot; + Environment.NewLine + DT_ExcelData.ToString()]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="500.8,429.6" sap2010:WorkflowViewState.IdRef="SendMailX_7" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Request Has Been Processed Successfully" To="[SenderMail]" UseDocumentAsBody="False">
-                                          <umab:SendMailX.Files>
-                                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
-                                              <InArgument x:TypeArguments="x:String">[CurrentFile.FullName]</InArgument>
-                                            </scg:List>
-                                          </umab:SendMailX.Files>
-                                          <umab:SendMailX.HtmlBodyFromFile>
-                                            <umabh:HtmlContentArgument FilePath="{x:Null}" HtmlBody="{x:Null}">
-                                              <umabh:HtmlContentArgument.RuntimeImages>
-                                                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                                              </umabh:HtmlContentArgument.RuntimeImages>
-                                              <umabh:HtmlContentArgument.ValueMappings>
-                                                <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
-                                              </umabh:HtmlContentArgument.ValueMappings>
-                                            </umabh:HtmlContentArgument>
-                                          </umab:SendMailX.HtmlBodyFromFile>
-                                        </umab:SendMailX>
-                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Sent an Email to Trainees&quot;]" />
+                                        <Assign sap:VirtualizedContainerService.HintSize="536,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[GetFileExtension]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">[CurrentFile.Extension.ToLower()]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="536,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[GetFileExtension]" />
+                                        <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[CurrentFile.Extension.ToLower()]" sap:VirtualizedContainerService.HintSize="536,2509.6" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                                          <Switch.Default>
+                                            <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="534.4,225.6" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;This file is not in scope&quot;]" />
+                                            </Sequence>
+                                          </Switch.Default>
+                                          <Sequence x:Key=".pdf" DisplayName="Body" sap:VirtualizedContainerService.HintSize="534.4,893.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;This mail has PDF attachment&quot;]" />
+                                            <umab:GmailApplicationCard Account="{x:Null}" ClientId="{x:Null}" ClientSecret="{x:Null}" EmailAddress="{x:Null}" ConnectionAccountName="isfumtech@gmail.com #2" ConnectionId="8afc129f-4fbe-4496-a9b9-83f144abb3f4" DisplayName="Use Gmail" sap:VirtualizedContainerService.HintSize="500.8,659.2" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_2" Timeout="90" UseConnectionService="True">
+                                              <umab:GmailApplicationCard.Body>
+                                                <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,452.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[&quot;Hi Team,  &#xA;&#xA;We are unable to process this file format. Please attach a proper Excel Format files to process. File Name is: &quot; + CurrentFile.Name]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,392.8" sap2010:WorkflowViewState.IdRef="SendMailX_3" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Unable to Process the File Format" To="[SenderMail]" UseDocumentAsBody="False">
+                                                      <umab:SendMailX.Files>
+                                                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                                      </umab:SendMailX.Files>
+                                                      <umab:SendMailX.HtmlBodyFromFile>
+                                                        <umabh:HtmlContentArgument FilePath="{x:Null}" HtmlBody="{x:Null}">
+                                                          <umabh:HtmlContentArgument.RuntimeImages>
+                                                            <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                                          </umabh:HtmlContentArgument.RuntimeImages>
+                                                          <umabh:HtmlContentArgument.ValueMappings>
+                                                            <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                                          </umabh:HtmlContentArgument.ValueMappings>
+                                                        </umabh:HtmlContentArgument>
+                                                      </umab:SendMailX.HtmlBodyFromFile>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </umab:SendMailX>
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </umab:GmailApplicationCard.Body>
+                                            </umab:GmailApplicationCard>
+                                          </Sequence>
+                                          <Sequence x:Key=".xlsx" DisplayName="Body" sap:VirtualizedContainerService.HintSize="534.4,1144" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="sd:DataTable" Name="DT_ExcelData" />
+                                            </Sequence.Variables>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Reading an email that has Excel attachment&quot;]" />
+                                            <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[DT_ExcelData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="500.8,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Employee Details" WorkbookPath="[CurrentFile.FullName]">
+                                              <ui:ReadRange.Range>
+                                                <InArgument x:TypeArguments="x:String">
+                                                  <Literal x:TypeArguments="x:String" Value="" />
+                                                </InArgument>
+                                              </ui:ReadRange.Range>
+                                            </ui:ReadRange>
+                                            <ui:FilterDataTable DataTable="[DT_ExcelData]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="500.8,194.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[DT_ExcelData]" SelectColumnsMode="Remove">
+                                              <ui:FilterDataTable.Filters>
+                                                <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                                  <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+                                                    <ui:FilterOperationArgument.Column>
+                                                      <InArgument x:TypeArguments="x:String">["Role in Company"]</InArgument>
+                                                    </ui:FilterOperationArgument.Column>
+                                                    <ui:FilterOperationArgument.Operand>
+                                                      <InArgument x:TypeArguments="x:String">["Analyst"]</InArgument>
+                                                    </ui:FilterOperationArgument.Operand>
+                                                  </ui:FilterOperationArgument>
+                                                  <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                                    <ui:FilterOperationArgument.Column>
+                                                      <InArgument x:TypeArguments="x:String">["Role in Company"]</InArgument>
+                                                    </ui:FilterOperationArgument.Column>
+                                                    <ui:FilterOperationArgument.Operand>
+                                                      <InArgument x:TypeArguments="x:String">["IT Specialist"]</InArgument>
+                                                    </ui:FilterOperationArgument.Operand>
+                                                  </ui:FilterOperationArgument>
+                                                  <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                                    <ui:FilterOperationArgument.Column>
+                                                      <InArgument x:TypeArguments="x:String">["Role in Company"]</InArgument>
+                                                    </ui:FilterOperationArgument.Column>
+                                                    <ui:FilterOperationArgument.Operand>
+                                                      <InArgument x:TypeArguments="x:String">["Scientist"]</InArgument>
+                                                    </ui:FilterOperationArgument.Operand>
+                                                  </ui:FilterOperationArgument>
+                                                </scg:List>
+                                              </ui:FilterDataTable.Filters>
+                                              <ui:FilterDataTable.SelectColumns>
+                                                <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                                  <x:Null />
+                                                </scg:List>
+                                              </ui:FilterDataTable.SelectColumns>
+                                            </ui:FilterDataTable>
+                                            <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[&quot;Hi Team, &quot; + Environment.NewLine + &quot;We have successfully processed your file: &quot; + Environment.NewLine + DT_ExcelData.ToString()]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="500.8,429.6" sap2010:WorkflowViewState.IdRef="SendMailX_7" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Request Has Been Processed Successfully" To="[SenderMail]" UseDocumentAsBody="False">
+                                              <umab:SendMailX.Files>
+                                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                                  <InArgument x:TypeArguments="x:String">[CurrentFile.FullName]</InArgument>
+                                                </scg:List>
+                                              </umab:SendMailX.Files>
+                                              <umab:SendMailX.HtmlBodyFromFile>
+                                                <umabh:HtmlContentArgument FilePath="{x:Null}" HtmlBody="{x:Null}">
+                                                  <umabh:HtmlContentArgument.RuntimeImages>
+                                                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                                  </umabh:HtmlContentArgument.RuntimeImages>
+                                                  <umabh:HtmlContentArgument.ValueMappings>
+                                                    <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                                  </umabh:HtmlContentArgument.ValueMappings>
+                                                </umabh:HtmlContentArgument>
+                                              </umab:SendMailX.HtmlBodyFromFile>
+                                            </umab:SendMailX>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Sent an Email to Trainees&quot;]" />
+                                          </Sequence>
+                                        </Switch>
                                       </Sequence>
-                                    </Switch>
-                                  </Sequence>
-                                </ActivityAction>
-                              </ui:ForEachFileX.Body>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </ui:ForEachFileX>
-                          </Sequence>
-                        </If.Else>
-                      </If>
-                    </Sequence>
-                  </ActivityAction>
-                </umab:ForEachEmailX.Body>
-                <umab:ForEachEmailX.MailFilter>
-                  <umabf:MailFilterArgument LogicalOperator="And">
-                    <umabf:MailFilterArgument.Filters>
-                      <scg:List x:TypeArguments="umabf:SingleMailFilterArgument" Capacity="1">
-                        <umabf:SingleMailFilterArgument DateEqualsFilter="{x:Null}" Criteria="From" DateFilter="SevenDays" Operator="Contains" Value="[SenderMail]" />
-                      </scg:List>
-                    </umabf:MailFilterArgument.Filters>
-                  </umabf:MailFilterArgument>
-                </umab:ForEachEmailX.MailFilter>
+                                    </ActivityAction>
+                                  </ui:ForEachFileX.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:ForEachFileX>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </ActivityAction>
+                    </umab:ForEachEmailX.Body>
+                    <umab:ForEachEmailX.MailFilter>
+                      <umabf:MailFilterArgument LogicalOperator="And">
+                        <umabf:MailFilterArgument.Filters>
+                          <scg:List x:TypeArguments="umabf:SingleMailFilterArgument" Capacity="1">
+                            <umabf:SingleMailFilterArgument DateEqualsFilter="{x:Null}" Criteria="From" DateFilter="SevenDays" Operator="Contains" Value="[SenderMail]" />
+                          </scg:List>
+                        </umabf:MailFilterArgument.Filters>
+                      </umabf:MailFilterArgument>
+                    </umab:ForEachEmailX.MailFilter>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </umab:ForEachEmailX>
+                </Sequence>
+              </ActivityAction>
+            </umab:GmailApplicationCard.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </umab:GmailApplicationCard>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="772.8,173.6" sap2010:WorkflowViewState.IdRef="Sequence_31">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-              </umab:ForEachEmailX>
-            </Sequence>
-          </ActivityAction>
-        </umab:GmailApplicationCard.Body>
+                <Throw Exception="[New Exception(exception.Message)]" sap:VirtualizedContainerService.HintSize="739.2,113.6" sap2010:WorkflowViewState.IdRef="Throw_2" />
+              </Sequence>
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+        <TryCatch.Finally>
+          <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="772.8,225.6" sap2010:WorkflowViewState.IdRef="Sequence_32">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="739.2,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Email Extraction Has Ended&quot;]" />
+          </Sequence>
+        </TryCatch.Finally>
+      </TryCatch>
+      <Sequence sap:VirtualizedContainerService.HintSize="808,5468.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-      </umab:GmailApplicationCard>
-      <Sequence sap:VirtualizedContainerService.HintSize="772.8,305.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Email Extraction Has Ended&quot;]" />
-        <umab:GmailApplicationCard Account="{x:Null}" ClientId="{x:Null}" ClientSecret="{x:Null}" EmailAddress="{x:Null}" ConnectionAccountName="isfumtech@gmail.com #2" ConnectionId="8afc129f-4fbe-4496-a9b9-83f144abb3f4" DisplayName="Use Gmail" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_3" Timeout="90" UseConnectionService="True">
+        <umab:GmailApplicationCard Account="{x:Null}" ClientId="{x:Null}" ClientSecret="{x:Null}" EmailAddress="{x:Null}" ConnectionAccountName="isfumtech@gmail.com #2" ConnectionId="8afc129f-4fbe-4496-a9b9-83f144abb3f4" DisplayName="Use Gmail" sap:VirtualizedContainerService.HintSize="774.4,5385.6" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_3" Timeout="90" UseConnectionService="True">
           <umab:GmailApplicationCard.Body>
             <ActivityAction x:TypeArguments="um:IMailQuickHandle">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="739.2,4753.6" sap2010:WorkflowViewState.IdRef="Sequence_24">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="740.8,5180.8" sap2010:WorkflowViewState.IdRef="Sequence_24">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <umab:ForEachEmailX DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="705.6,4693.6" sap2010:WorkflowViewState.IdRef="ForEachEmailX_2" IncludeSubfolders="False" Mails="[Gmail.Folder(&quot;Inbox&quot;)]" NumberOfEmailsLimit="15" UnreadOnly="True" WithAttachmentsOnly="False">
+                <umab:ForEachEmailX DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="707.2,5120.8" sap2010:WorkflowViewState.IdRef="ForEachEmailX_2" IncludeSubfolders="False" Mails="[Gmail.Folder(&quot;Inbox&quot;)]" NumberOfEmailsLimit="15" UnreadOnly="True" WithAttachmentsOnly="False">
                   <umab:ForEachEmailX.Body>
                     <ActivityAction x:TypeArguments="snm:MailMessage, x:Int32">
                       <ActivityAction.Argument1>
@@ -436,23 +467,23 @@
                       <ActivityAction.Argument2>
                         <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                       </ActivityAction.Argument2>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="672,4406.4" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="673.6,4833.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <If Condition="[IsNothing(CurrenMail.Attachments)]" sap:VirtualizedContainerService.HintSize="638.4,4346.4" sap2010:WorkflowViewState.IdRef="If_3">
+                        <If Condition="[IsNothing(CurrenMail.Attachments)]" sap:VirtualizedContainerService.HintSize="640,4773.6" sap2010:WorkflowViewState.IdRef="If_3">
                           <If.Then>
-                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="636.8,632" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="638.4,632" sap2010:WorkflowViewState.IdRef="Sequence_26">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="603.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;This mail has no attachment&quot;]" />
-                              <umab:ForwardMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" Body="Hi There, Please attach the files to process" BodyType="Text" DisplayName="Forward Email" sap:VirtualizedContainerService.HintSize="603.2,397.6" sap2010:WorkflowViewState.IdRef="ForwardMailX_2" MailMessage="[CurrenMail]" MaxBodyDocumentSizeMB="2" NewSubject="This Mail has No Attachments" To="[CurrenMail.Sender.Address]" UseDocumentAsBody="False">
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="604.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;This mail has no attachment&quot;]" />
+                              <umab:ForwardMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" Body="Hi There, Please attach the files to process" BodyType="Text" DisplayName="Forward Email" sap:VirtualizedContainerService.HintSize="604.8,397.6" sap2010:WorkflowViewState.IdRef="ForwardMailX_2" MailMessage="[CurrenMail]" MaxBodyDocumentSizeMB="2" NewSubject="This Mail has No Attachments" To="[CurrenMail.Sender.Address]" UseDocumentAsBody="False">
                                 <umab:ForwardMailX.Files>
                                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                                 </umab:ForwardMailX.Files>
@@ -476,15 +507,15 @@
                             </Sequence>
                           </If.Then>
                           <If.Else>
-                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="636.8,3584.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="638.4,4012" sap2010:WorkflowViewState.IdRef="Sequence_27">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="603.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;This email has an attachment&quot;]" />
-                              <umab:SaveMailAttachmentsX Attachments="{x:Null}" DisplayName="Save Email Attachments" ExcludeInlineAttachments="True" FolderPath="[String.Concat(&quot;C:\Users\Nasima Banu\Documents\Email Attachhments&quot;)]" sap:VirtualizedContainerService.HintSize="603.2,261.6" sap2010:WorkflowViewState.IdRef="SaveMailAttachmentsX_2" Message="[CurrenMail]" OverwriteExisting="True" />
-                              <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="C:\Users\Nasima Banu\Documents\Email Attachhments" sap:VirtualizedContainerService.HintSize="603.2,3088.8" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="True">
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="604.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;This email has an attachment&quot;]" />
+                              <umab:SaveMailAttachmentsX Attachments="{x:Null}" DisplayName="Save Email Attachments" ExcludeInlineAttachments="True" FolderPath="[String.Concat(&quot;C:\Users\Nasima Banu\Documents\Email Attachhments&quot;)]" sap:VirtualizedContainerService.HintSize="604.8,261.6" sap2010:WorkflowViewState.IdRef="SaveMailAttachmentsX_2" Message="[CurrenMail]" OverwriteExisting="True" />
+                              <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="C:\Users\Nasima Banu\Documents\Email Attachhments" sap:VirtualizedContainerService.HintSize="604.8,3516" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="True">
                                 <ui:ForEachFileX.Body>
                                   <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
                                     <ActivityAction.Argument1>
@@ -493,7 +524,7 @@
                                     <ActivityAction.Argument2>
                                       <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                                     </ActivityAction.Argument2>
-                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="569.6,2800.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="571.2,3228" sap2010:WorkflowViewState.IdRef="Sequence_21">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="x:String" Name="GetFileExtension" />
                                       </Sequence.Variables>
@@ -502,7 +533,7 @@
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Assign sap:VirtualizedContainerService.HintSize="536,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                      <Assign sap:VirtualizedContainerService.HintSize="537.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:String">[GetFileExtension]</OutArgument>
                                         </Assign.To>
@@ -510,135 +541,165 @@
                                           <InArgument x:TypeArguments="x:String">[CurrentFile.Extension.ToLower()]</InArgument>
                                         </Assign.Value>
                                       </Assign>
-                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="536,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[GetFileExtension]" />
-                                      <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[CurrentFile.Extension.ToLower()]" sap:VirtualizedContainerService.HintSize="536,2509.6" sap2010:WorkflowViewState.IdRef="Switch`1_2">
-                                        <Switch.Default>
-                                          <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="534.4,225.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="537.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[GetFileExtension]" />
+                                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="537.6,2936.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                                        <TryCatch.Try>
+                                          <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[CurrentFile.Extension.ToLower()]" sap:VirtualizedContainerService.HintSize="536,2486.4" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                                            <Switch.Default>
+                                              <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="534.4,225.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Warn" Message="[&quot;This file is not in scope&quot;]" />
+                                              </Sequence>
+                                            </Switch.Default>
+                                            <Sequence x:Key=".pdf" DisplayName="Body" sap:VirtualizedContainerService.HintSize="534.4,893.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;This mail has PDF attachment&quot;]" />
+                                              <umab:GmailApplicationCard Account="{x:Null}" ClientId="{x:Null}" ClientSecret="{x:Null}" EmailAddress="{x:Null}" ConnectionAccountName="isfumtech@gmail.com #2" ConnectionId="8afc129f-4fbe-4496-a9b9-83f144abb3f4" DisplayName="Use Gmail" sap:VirtualizedContainerService.HintSize="500.8,659.2" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_4" Timeout="90" UseConnectionService="True">
+                                                <umab:GmailApplicationCard.Body>
+                                                  <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                                                    <ActivityAction.Argument>
+                                                      <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
+                                                    </ActivityAction.Argument>
+                                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,452.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[&quot;Hi Team,  &#xA;&#xA;We are unable to process this file format. Please attach a proper Excel Format files to process. File Name is: &quot; + CurrentFile.Name]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,392.8" sap2010:WorkflowViewState.IdRef="SendMailX_9" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Unable to Process the File Format" To="[SenderMail]" UseDocumentAsBody="False">
+                                                        <umab:SendMailX.Files>
+                                                          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                                        </umab:SendMailX.Files>
+                                                        <umab:SendMailX.HtmlBodyFromFile>
+                                                          <umabh:HtmlContentArgument FilePath="{x:Null}" HtmlBody="{x:Null}">
+                                                            <umabh:HtmlContentArgument.RuntimeImages>
+                                                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                                            </umabh:HtmlContentArgument.RuntimeImages>
+                                                            <umabh:HtmlContentArgument.ValueMappings>
+                                                              <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                                            </umabh:HtmlContentArgument.ValueMappings>
+                                                          </umabh:HtmlContentArgument>
+                                                        </umab:SendMailX.HtmlBodyFromFile>
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </umab:SendMailX>
+                                                    </Sequence>
+                                                  </ActivityAction>
+                                                </umab:GmailApplicationCard.Body>
+                                              </umab:GmailApplicationCard>
+                                            </Sequence>
+                                            <Sequence x:Key=".xlsx" DisplayName="Body" sap:VirtualizedContainerService.HintSize="534.4,1144" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                              <Sequence.Variables>
+                                                <Variable x:TypeArguments="sd:DataTable" Name="DT_ExcelData" />
+                                              </Sequence.Variables>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Reading an email that has Excel attachment&quot;]" />
+                                              <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[DT_ExcelData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="500.8,120" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Employee Details" WorkbookPath="[CurrentFile.FullName]">
+                                                <ui:ReadRange.Range>
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <Literal x:TypeArguments="x:String" Value="" />
+                                                  </InArgument>
+                                                </ui:ReadRange.Range>
+                                              </ui:ReadRange>
+                                              <ui:FilterDataTable DataTable="[DT_ExcelData]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="500.8,194.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[DT_ExcelData]" SelectColumnsMode="Remove">
+                                                <ui:FilterDataTable.Filters>
+                                                  <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                                    <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+                                                      <ui:FilterOperationArgument.Column>
+                                                        <InArgument x:TypeArguments="x:String">["Role in Company"]</InArgument>
+                                                      </ui:FilterOperationArgument.Column>
+                                                      <ui:FilterOperationArgument.Operand>
+                                                        <InArgument x:TypeArguments="x:String">["Analyst"]</InArgument>
+                                                      </ui:FilterOperationArgument.Operand>
+                                                    </ui:FilterOperationArgument>
+                                                    <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                                      <ui:FilterOperationArgument.Column>
+                                                        <InArgument x:TypeArguments="x:String">["Role in Company"]</InArgument>
+                                                      </ui:FilterOperationArgument.Column>
+                                                      <ui:FilterOperationArgument.Operand>
+                                                        <InArgument x:TypeArguments="x:String">["IT Specialist"]</InArgument>
+                                                      </ui:FilterOperationArgument.Operand>
+                                                    </ui:FilterOperationArgument>
+                                                    <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                                      <ui:FilterOperationArgument.Column>
+                                                        <InArgument x:TypeArguments="x:String">["Role in Company"]</InArgument>
+                                                      </ui:FilterOperationArgument.Column>
+                                                      <ui:FilterOperationArgument.Operand>
+                                                        <InArgument x:TypeArguments="x:String">["Scientist"]</InArgument>
+                                                      </ui:FilterOperationArgument.Operand>
+                                                    </ui:FilterOperationArgument>
+                                                  </scg:List>
+                                                </ui:FilterDataTable.Filters>
+                                                <ui:FilterDataTable.SelectColumns>
+                                                  <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                                    <x:Null />
+                                                  </scg:List>
+                                                </ui:FilterDataTable.SelectColumns>
+                                              </ui:FilterDataTable>
+                                              <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[&quot;Hi Team, &quot; + Environment.NewLine + &quot;We have successfully processed your file: &quot; + Environment.NewLine + DT_ExcelData.ToString()]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="500.8,429.6" sap2010:WorkflowViewState.IdRef="SendMailX_8" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Request Has Been Processed Successfully" To="[SenderMail]" UseDocumentAsBody="False">
+                                                <umab:SendMailX.Files>
+                                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                                    <InArgument x:TypeArguments="x:String">[CurrentFile.FullName]</InArgument>
+                                                  </scg:List>
+                                                </umab:SendMailX.Files>
+                                                <umab:SendMailX.HtmlBodyFromFile>
+                                                  <umabh:HtmlContentArgument FilePath="{x:Null}" HtmlBody="{x:Null}">
+                                                    <umabh:HtmlContentArgument.RuntimeImages>
+                                                      <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                                    </umabh:HtmlContentArgument.RuntimeImages>
+                                                    <umabh:HtmlContentArgument.ValueMappings>
+                                                      <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                                    </umabh:HtmlContentArgument.ValueMappings>
+                                                  </umabh:HtmlContentArgument>
+                                                </umab:SendMailX.HtmlBodyFromFile>
+                                              </umab:SendMailX>
+                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;Sent an Email to Trainees&quot;]" />
+                                            </Sequence>
+                                          </Switch>
+                                        </TryCatch.Try>
+                                        <TryCatch.Catches>
+                                          <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                                            <ActivityAction x:TypeArguments="s:Exception">
+                                              <ActivityAction.Argument>
+                                                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                              </ActivityAction.Argument>
+                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="536,173.6" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <Throw Exception="[New Exception(exception.Message)]" sap:VirtualizedContainerService.HintSize="502.4,113.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                                              </Sequence>
+                                            </ActivityAction>
+                                          </Catch>
+                                        </TryCatch.Catches>
+                                        <TryCatch.Finally>
+                                          <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="536,89.6" sap2010:WorkflowViewState.IdRef="Sequence_34">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Warn" Message="[&quot;This file is not in scope&quot;]" />
                                           </Sequence>
-                                        </Switch.Default>
-                                        <Sequence x:Key=".pdf" DisplayName="Body" sap:VirtualizedContainerService.HintSize="534.4,893.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;This mail has PDF attachment&quot;]" />
-                                          <umab:GmailApplicationCard Account="{x:Null}" ClientId="{x:Null}" ClientSecret="{x:Null}" EmailAddress="{x:Null}" ConnectionAccountName="isfumtech@gmail.com #2" ConnectionId="8afc129f-4fbe-4496-a9b9-83f144abb3f4" DisplayName="Use Gmail" sap:VirtualizedContainerService.HintSize="500.8,659.2" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_4" Timeout="90" UseConnectionService="True">
-                                            <umab:GmailApplicationCard.Body>
-                                              <ActivityAction x:TypeArguments="um:IMailQuickHandle">
-                                                <ActivityAction.Argument>
-                                                  <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
-                                                </ActivityAction.Argument>
-                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,452.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[&quot;Hi Team,  &#xA;&#xA;We are unable to process this file format. Please attach a proper Excel Format files to process. File Name is: &quot; + CurrentFile.Name]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,392.8" sap2010:WorkflowViewState.IdRef="SendMailX_9" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Unable to Process the File Format" To="[SenderMail]" UseDocumentAsBody="False">
-                                                    <umab:SendMailX.Files>
-                                                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                                                    </umab:SendMailX.Files>
-                                                    <umab:SendMailX.HtmlBodyFromFile>
-                                                      <umabh:HtmlContentArgument FilePath="{x:Null}" HtmlBody="{x:Null}">
-                                                        <umabh:HtmlContentArgument.RuntimeImages>
-                                                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                                                        </umabh:HtmlContentArgument.RuntimeImages>
-                                                        <umabh:HtmlContentArgument.ValueMappings>
-                                                          <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
-                                                        </umabh:HtmlContentArgument.ValueMappings>
-                                                      </umabh:HtmlContentArgument>
-                                                    </umab:SendMailX.HtmlBodyFromFile>
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                  </umab:SendMailX>
-                                                </Sequence>
-                                              </ActivityAction>
-                                            </umab:GmailApplicationCard.Body>
-                                          </umab:GmailApplicationCard>
-                                        </Sequence>
-                                        <Sequence x:Key=".xlsx" DisplayName="Body" sap:VirtualizedContainerService.HintSize="534.4,1144" sap2010:WorkflowViewState.IdRef="Sequence_22">
-                                          <Sequence.Variables>
-                                            <Variable x:TypeArguments="sd:DataTable" Name="DT_ExcelData" />
-                                          </Sequence.Variables>
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Reading an email that has Excel attachment&quot;]" />
-                                          <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[DT_ExcelData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="500.8,120" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Employee Details" WorkbookPath="[CurrentFile.FullName]">
-                                            <ui:ReadRange.Range>
-                                              <InArgument x:TypeArguments="x:String">
-                                                <Literal x:TypeArguments="x:String" Value="" />
-                                              </InArgument>
-                                            </ui:ReadRange.Range>
-                                          </ui:ReadRange>
-                                          <ui:FilterDataTable DataTable="[DT_ExcelData]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="500.8,194.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[DT_ExcelData]" SelectColumnsMode="Remove">
-                                            <ui:FilterDataTable.Filters>
-                                              <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                                                <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
-                                                  <ui:FilterOperationArgument.Column>
-                                                    <InArgument x:TypeArguments="x:String">["Role in Company"]</InArgument>
-                                                  </ui:FilterOperationArgument.Column>
-                                                  <ui:FilterOperationArgument.Operand>
-                                                    <InArgument x:TypeArguments="x:String">["Analyst"]</InArgument>
-                                                  </ui:FilterOperationArgument.Operand>
-                                                </ui:FilterOperationArgument>
-                                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
-                                                  <ui:FilterOperationArgument.Column>
-                                                    <InArgument x:TypeArguments="x:String">["Role in Company"]</InArgument>
-                                                  </ui:FilterOperationArgument.Column>
-                                                  <ui:FilterOperationArgument.Operand>
-                                                    <InArgument x:TypeArguments="x:String">["IT Specialist"]</InArgument>
-                                                  </ui:FilterOperationArgument.Operand>
-                                                </ui:FilterOperationArgument>
-                                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
-                                                  <ui:FilterOperationArgument.Column>
-                                                    <InArgument x:TypeArguments="x:String">["Role in Company"]</InArgument>
-                                                  </ui:FilterOperationArgument.Column>
-                                                  <ui:FilterOperationArgument.Operand>
-                                                    <InArgument x:TypeArguments="x:String">["Scientist"]</InArgument>
-                                                  </ui:FilterOperationArgument.Operand>
-                                                </ui:FilterOperationArgument>
-                                              </scg:List>
-                                            </ui:FilterDataTable.Filters>
-                                            <ui:FilterDataTable.SelectColumns>
-                                              <scg:List x:TypeArguments="InArgument" Capacity="4">
-                                                <x:Null />
-                                              </scg:List>
-                                            </ui:FilterDataTable.SelectColumns>
-                                          </ui:FilterDataTable>
-                                          <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[&quot;Hi Team, &quot; + Environment.NewLine + &quot;We have successfully processed your file: &quot; + Environment.NewLine + DT_ExcelData.ToString()]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="500.8,429.6" sap2010:WorkflowViewState.IdRef="SendMailX_8" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Request Has Been Processed Successfully" To="[SenderMail]" UseDocumentAsBody="False">
-                                            <umab:SendMailX.Files>
-                                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
-                                                <InArgument x:TypeArguments="x:String">[CurrentFile.FullName]</InArgument>
-                                              </scg:List>
-                                            </umab:SendMailX.Files>
-                                            <umab:SendMailX.HtmlBodyFromFile>
-                                              <umabh:HtmlContentArgument FilePath="{x:Null}" HtmlBody="{x:Null}">
-                                                <umabh:HtmlContentArgument.RuntimeImages>
-                                                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                                                </umabh:HtmlContentArgument.RuntimeImages>
-                                                <umabh:HtmlContentArgument.ValueMappings>
-                                                  <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
-                                                </umabh:HtmlContentArgument.ValueMappings>
-                                              </umabh:HtmlContentArgument>
-                                            </umab:SendMailX.HtmlBodyFromFile>
-                                          </umab:SendMailX>
-                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="500.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;Sent an Email to Trainees&quot;]" />
-                                        </Sequence>
-                                      </Switch>
+                                        </TryCatch.Finally>
+                                      </TryCatch>
                                     </Sequence>
                                   </ActivityAction>
                                 </ui:ForEachFileX.Body>
@@ -676,7 +737,7 @@
           </umab:GmailApplicationCard.Body>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
