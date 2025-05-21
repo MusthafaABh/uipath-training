@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Warfare",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "97UXVPhoZEaNdm08U2tBcA",
+  "Reference": "bfWZDUp7eE2cY22B6RXyVg/97UXVPhoZEaNdm08U2tBcA",
+  "ParentRef": "bfWZDUp7eE2cY22B6RXyVg/iLdJU94p3U6yXyMmQmopbQ",
+  "Created": "2025-05-14T18:11:30.5175974Z",
+  "Updated": "2025-05-14T18:11:30.5175974Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.12.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

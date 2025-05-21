@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="UiAutomationTestWithSingleTypeInto" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="UiAutomationTestWithSingleTypeInto_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="UiAutomationTestWithSingleTypeInto" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="UiAutomationTestWithSingleTypeInto_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -46,6 +46,7 @@
       <x:String>UiPath.DataTableUtilities</x:String>
       <x:String>System.Security</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -112,7 +113,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="UiAutomationTestWithSingleTypeInto" sap:VirtualizedContainerService.HintSize="870.8000000000001,3140.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="UiAutomationTestWithSingleTypeInto" sap:VirtualizedContainerService.HintSize="925.2,3665.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="index">
         <sap:WorkflowViewStateService.ViewState>
@@ -128,7 +129,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Ui Automation - Submit Form" sap:VirtualizedContainerService.HintSize="681.6,3117.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Ui Automation - Submit Form" sap:VirtualizedContainerService.HintSize="681.6,3642.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="CurrentColumn" />
         <Variable x:TypeArguments="x:String" Name="CurrentValue" />
@@ -139,21 +140,21 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="648,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;UI Automation has Started&quot;]" />
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="RPA Challenge Browser Actions" sap:VirtualizedContainerService.HintSize="648,2860" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="a64b0e7b-867d-48b6-abab-f3c5cdb16e47" Version="V2">
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="RPA Challenge Browser Actions" sap:VirtualizedContainerService.HintSize="648,3384.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="a64b0e7b-867d-48b6-abab-f3c5cdb16e47" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="614.4,2620" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="614.4,3144.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NCheckState DisplayName="Check RPA Challenge is Fully Loaded" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="580.8,2558.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="a64b0e7b-867d-48b6-abab-f3c5cdb16e47" Timeout="0.2" Version="V4">
+              <uix:NCheckState DisplayName="Check RPA Challenge is Fully Loaded" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="580.8,3083.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="a64b0e7b-867d-48b6-abab-f3c5cdb16e47" Timeout="0.2" Version="V4">
                 <uix:NCheckState.IfExists>
-                  <Sequence DisplayName="Executing UI Actions" sap:VirtualizedContainerService.HintSize="537.6,2275.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Executing UI Actions" sap:VirtualizedContainerService.HintSize="537.6,2840" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="sd:DataTable" Name="Dt_ExcelData" />
                       <Variable x:TypeArguments="sd:DataTable" Name="SelectorTable" />
@@ -187,25 +188,26 @@
                       </ui:ReadRange.Range>
                     </ui:ReadRange>
                     <ui:BuildDataTable DataTable="[SelectorTable]" DisplayName="Create New Selectors Table" sap:VirtualizedContainerService.HintSize="504,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;DataColumnName&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;SelectorValue&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;DataColumnName&gt;First Name&lt;/DataColumnName&gt;&#xA;    &lt;SelectorValue&gt;&amp;lt;html app='chrome.exe' title='Rpa Challenge' /&amp;gt; &amp;lt;webctrl innertext='First Name' /&amp;gt; &amp;lt;webctrl tag='INPUT' /&amp;gt;&lt;/SelectorValue&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;DataColumnName&gt;Last Name &lt;/DataColumnName&gt;&#xA;    &lt;SelectorValue&gt;&amp;lt;html app='chrome.exe' title='Rpa Challenge' /&amp;gt; &amp;lt;webctrl innertext='Last Name' /&amp;gt; &amp;lt;webctrl tag='INPUT' /&amp;gt;&lt;/SelectorValue&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;DataColumnName&gt;Company Name&lt;/DataColumnName&gt;&#xA;    &lt;SelectorValue&gt;&amp;lt;html app='chrome.exe' title='Rpa Challenge' /&amp;gt; &amp;lt;webctrl innertext='Company Name' /&amp;gt;  &amp;lt;webctrl tag='INPUT' /&amp;gt;&lt;/SelectorValue&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;DataColumnName&gt;Role in Company&lt;/DataColumnName&gt;&#xA;    &lt;SelectorValue&gt;&amp;lt;html app='chrome.exe' title='Rpa Challenge' /&amp;gt; &amp;lt;webctrl innertext='Role in Company' /&amp;gt; &amp;lt;webctrl tag='INPUT' /&amp;gt;&lt;/SelectorValue&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;DataColumnName&gt;Address&lt;/DataColumnName&gt;&#xA;    &lt;SelectorValue&gt;&amp;lt;html app='chrome.exe' title='Rpa Challenge' /&amp;gt; &amp;lt;webctrl innertext='Address' /&amp;gt; &amp;lt;webctrl tag='INPUT' /&amp;gt;&lt;/SelectorValue&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;DataColumnName&gt;Email&lt;/DataColumnName&gt;&#xA;    &lt;SelectorValue&gt;&amp;lt;html app='chrome.exe' title='Rpa Challenge' /&amp;gt; &amp;lt;webctrl innertext='Email' /&amp;gt; &amp;lt;webctrl tag='INPUT' /&amp;gt;&lt;/SelectorValue&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;DataColumnName&gt;Phone Number&lt;/DataColumnName&gt;&#xA;    &lt;SelectorValue&gt;&amp;lt;html app='chrome.exe' title='Rpa Challenge' /&amp;gt; &amp;lt;webctrl innertext='Phone Number' /&amp;gt; &amp;lt;webctrl tag='INPUT' /&amp;gt;&lt;/SelectorValue&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
-                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[index]" DataTable="[Dt_ExcelData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="504,1600" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="504,176" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;New Table Is Created with Selectors&quot;]" />
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[index]" DataTable="[Dt_ExcelData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="504,1988.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="502.4,1425.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="502.4,1814.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[SelectorTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="468.8,860" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[SelectorTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="468.8,1754.4" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                               <ui:ForEachRow.Body>
                                 <ActivityAction x:TypeArguments="sd:DataRow">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,678.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,1581.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:String" Name="CurrentSelector" />
                                     </Sequence.Variables>
@@ -238,48 +240,98 @@
                                         <InArgument x:TypeArguments="x:String">[CurrentRow("SelectorValue").ToString]</InArgument>
                                       </Assign.Value>
                                     </Assign>
-                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Enter Values Into Website" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,277.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a64b0e7b-867d-48b6-abab-f3c5cdb16e47" Text="[CurrentValue]" Version="V4">
-                                      <uix:NTypeInto.Target>
-                                        <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[CurrentSelector]" Guid="00f2b707-969e-4da2-a6b7-239373dfa399" SearchSteps="Selector" />
-                                      </uix:NTypeInto.Target>
-                                      <uix:NTypeInto.VerifyOptions>
-                                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                                          <uix:VerifyExecutionTypeIntoOptions.Retry>
-                                            <InArgument x:TypeArguments="x:Boolean" />
-                                          </uix:VerifyExecutionTypeIntoOptions.Retry>
-                                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                            <InArgument x:TypeArguments="x:Double" />
-                                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                                        </uix:VerifyExecutionTypeIntoOptions>
-                                      </uix:NTypeInto.VerifyOptions>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </uix:NTypeInto>
+                                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="433.6,1180.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                      <TryCatch.Try>
+                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Enter Values Into Website" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,254.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a64b0e7b-867d-48b6-abab-f3c5cdb16e47" Text="[CurrentValue]" Version="V4">
+                                          <uix:NTypeInto.Target>
+                                            <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[CurrentSelector]" Guid="00f2b707-969e-4da2-a6b7-239373dfa399" SearchSteps="Selector" />
+                                          </uix:NTypeInto.Target>
+                                          <uix:NTypeInto.VerifyOptions>
+                                            <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                              <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                <InArgument x:TypeArguments="x:Boolean" />
+                                              </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                              <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                <InArgument x:TypeArguments="x:Double" />
+                                              </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                            </uix:VerifyExecutionTypeIntoOptions>
+                                          </uix:NTypeInto.VerifyOptions>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </uix:NTypeInto>
+                                      </TryCatch.Try>
+                                      <TryCatch.Catches>
+                                        <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                          <ActivityAction x:TypeArguments="s:Exception">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,173.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Throw Exception="[New Exception(exception.Message)]" sap:VirtualizedContainerService.HintSize="382.4,113.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </Catch>
+                                      </TryCatch.Catches>
+                                      <TryCatch.Finally>
+                                        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,565.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Submit the Form" sap:VirtualizedContainerService.HintSize="382.4,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a64b0e7b-867d-48b6-abab-f3c5cdb16e47" Version="V4">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="rpachallenge.com" CVScreenId="52adf28b-9e36-4781-8dc5-74b8a0c78509" ContentHash="11dZjVokbk-wGn1EwNmDUg" CvElementArea="606, 698, 150, 51" CvTextArea="645, 714, 71, 17" CvTextArgument="SUBMIT" CvType="Button" DesignTimeRectangle="609, 700, 145, 45" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" Guid="3be07017-8040-4572-a209-130184c1ce15" InformativeScreenshot="141f6ee0d925880e59ddad78e6917c60.png" Reference="bfWZDUp7eE2cY22B6RXyVg/N1raOLDTVkONNfGbiGoA6w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive" />
+                                            </uix:NClick.Target>
+                                            <uix:NClick.VerifyOptions>
+                                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                <uix:VerifyExecutionOptions.Retry>
+                                                  <InArgument x:TypeArguments="x:Boolean" />
+                                                </uix:VerifyExecutionOptions.Retry>
+                                                <uix:VerifyExecutionOptions.Timeout>
+                                                  <InArgument x:TypeArguments="x:Double" />
+                                                </uix:VerifyExecutionOptions.Timeout>
+                                              </uix:VerifyExecutionOptions>
+                                            </uix:NClick.VerifyOptions>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NClick>
+                                          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="382.4,112.8" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)+&quot;\Downloads\challenge.xlsx&quot;]">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:DeleteFileX>
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Ui Automation has been completed&quot;]">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:LogMessage>
+                                        </Sequence>
+                                      </TryCatch.Finally>
+                                    </TryCatch>
                                   </Sequence>
                                 </ActivityAction>
                               </ui:ForEachRow.Body>
                             </ui:ForEachRow>
-                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Submit the Form" sap:VirtualizedContainerService.HintSize="468.8,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a64b0e7b-867d-48b6-abab-f3c5cdb16e47" Version="V4">
-                              <uix:NClick.Target>
-                                <uix:TargetAnchorable BrowserURL="rpachallenge.com" CVScreenId="52adf28b-9e36-4781-8dc5-74b8a0c78509" ContentHash="11dZjVokbk-wGn1EwNmDUg" CvElementArea="606, 698, 150, 51" CvTextArea="645, 714, 71, 17" CvTextArgument="SUBMIT" CvType="Button" DesignTimeRectangle="609, 700, 145, 45" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" Guid="3be07017-8040-4572-a209-130184c1ce15" InformativeScreenshot="141f6ee0d925880e59ddad78e6917c60.png" Reference="bfWZDUp7eE2cY22B6RXyVg/N1raOLDTVkONNfGbiGoA6w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive" />
-                              </uix:NClick.Target>
-                              <uix:NClick.VerifyOptions>
-                                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                                  <uix:VerifyExecutionOptions.Retry>
-                                    <InArgument x:TypeArguments="x:Boolean" />
-                                  </uix:VerifyExecutionOptions.Retry>
-                                  <uix:VerifyExecutionOptions.Timeout>
-                                    <InArgument x:TypeArguments="x:Double" />
-                                  </uix:VerifyExecutionOptions.Timeout>
-                                </uix:VerifyExecutionOptions>
-                              </uix:NClick.VerifyOptions>
-                            </uix:NClick>
-                            <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="468.8,112.8" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)+&quot;\Downloads\challenge.xlsx&quot;]" />
-                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="468.8,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Ui Automation has been completed&quot;]" />
                           </Sequence>
                         </ActivityAction>
                       </ui:ForEachRow.Body>

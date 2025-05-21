@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Wm2mUyThGkm3CUJrqnyGHQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rpachallenge.com/movieSearch" CVScreenId="5d5e35b4-28a5-4f64-a435-54ce7007f5f9" DesignTimeRectangle="1450, 242, 432, 787" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl parentclass='cardItem' idx='1' /&gt;" Guid="082322ce-a7b2-4866-93d3-2abd1f8b6a89" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="644, 846, 316, 40" FullSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;&lt;webctrl parentclass='cardItem' idx='1' /&gt;&lt;webctrl aaname='*' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='card-content' tag='DIV' type='' aaname='' check:innerText='Conjuring the Cult&amp;#xA;more_vert&amp;#xA;&amp;#xA;After discovering his blood-soaked daughter dead in the bathtub,' /&gt;" Guid="80ea6f0c-ec1a-48d4-86b1-17a857a2551a" SearchSteps="Selector, FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="f5f7747bd32f2b2f683aefe78bd71d85.png" xmlns="">00xPp2fOQCEiQdlGVgRtoEQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

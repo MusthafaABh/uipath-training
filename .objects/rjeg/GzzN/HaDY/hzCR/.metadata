@@ -1,0 +1,14 @@
+﻿{
+  "Name": "State AL AK AZ AR CA CO…",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "hzCRrRdtaEGPh9Cr4HpuwA",
+  "Reference": "bfWZDUp7eE2cY22B6RXyVg/hzCRrRdtaEGPh9Cr4HpuwA",
+  "ParentRef": "bfWZDUp7eE2cY22B6RXyVg/HaDYxBgx60KWcfgzmL8pDw",
+  "Created": "2025-05-19T03:15:17.7739278Z",
+  "Updated": "2025-05-19T03:15:17.7739278Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.12.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
